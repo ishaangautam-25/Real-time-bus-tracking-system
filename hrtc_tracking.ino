@@ -140,6 +140,6 @@ void loop() {
     }
   }
 
-  delay(3000);                                  // Wait for 30 seconds before repeating the loop
+  delay(3000);                                  // Wait for 3 seconds before repeating the loop
 }
 
