@@ -19,6 +19,7 @@ GPS Tracking: The GPS module continuously tracks the bus's location.
 Data Transmission: The ESP32 processes the GPS data and transmits it to the ThingSpeak cloud platform via the SIM800H module.
 Data Visualization: ThingSpeak visualizes the real-time bus locations on a map.
 Mobile App: The mobile app fetches data from ThingSpeak and displays it on a user-friendly interface.
+
 Benefits
 
 Improved Commuter Experience: Real-time tracking reduces uncertainty and waiting times.
