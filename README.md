@@ -8,7 +8,7 @@ This project implements a **real-time bus tracking system** to enhance public tr
 ## Hardware Components
 The following table outlines the hardware components used in the project:
 
-```markdown
+
 | **S.No.** | **Component**             | **Model**           | **Description**                                                                | **Quantity** |
 |-----------|---------------------------|---------------------|--------------------------------------------------------------------------------|--------------|
 | 1         | Microcontroller           | ESP32               | Handles data processing and communication                                      | 1            |
