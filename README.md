@@ -197,6 +197,6 @@ GND           ───────► GND
 **Supabase Schema:**
 ![Real-time-bus-tracking-system](Supabase_schema.png)
 
-##App User interface:
+## App User interface:
 ![Real-time-bus-tracking-system](APP_UI.png)
 
