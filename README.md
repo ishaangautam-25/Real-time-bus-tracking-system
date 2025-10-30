@@ -198,5 +198,10 @@ GND           ───────► GND
 ![Real-time-bus-tracking-system](Supabase_schema.png)
 
 ## App User interface:
+![Real-time-bus-tracking-system](Create_account.png)
+
+![Real-time-bus-tracking-system](Login_page.png)
+
 ![Real-time-bus-tracking-system](APP_UI.png)
+
 
