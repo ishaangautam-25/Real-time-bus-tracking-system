@@ -1,52 +1,105 @@
 # 🚌 Real-Time Bus Tracking System
 
-> An **IoT-based smart transportation project** using **ESP32, GSM, GPS, and Flutter** to monitor public bus locations in real-time and enhance commuter convenience.
+A comprehensive IoT-based real-time bus tracking solution that combines GPS, GSM, and cloud technologies to provide live location tracking for public transportation. Built with ESP32, Flutter, and modern web technologies.
 
-![Project Banner](assets/banner.png)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Flutter](https://img.shields.io/badge/Flutter-02569B?logo=flutter&logoColor=white)](https://flutter.dev)
+[![ESP32](https://img.shields.io/badge/ESP32-000000?logo=espressif&logoColor=white)](https://www.espressif.com/)
 
 ---
 
 ## 📑 Table of Contents
 
-1. [Introduction](#introduction)
-2. [Objectives](#objectives)
-3. [Block Diagram & Working](#block-diagram--working)
-4. [Hardware Components](#hardware-components)
-5. [Software Tools](#software-tools)
-6. [System Implementation](#system-implementation)
-7. [Mobile Application Features](#mobile-application-features)
-8. [Advantages](#advantages)
-9. [Applications](#applications)
-10. [Challenges & Future Scope](#challenges--future-scope)
-11. [Conclusion](#conclusion)
-12. [Author & Credits](#author--credits)
+- [Overview](#overview)
+- [Features](#features)
+- [System Architecture](#system-architecture)
+- [Hardware Components](#hardware-components)
+- [Software Stack](#software-stack)
+- [Installation](#installation)
+  - [Hardware Setup](#hardware-setup)
+  - [Software Setup](#software-setup)
+- [Configuration](#configuration)
+- [Complete Code Implementation](#complete-code-implementation)
+  - [ESP32 Firmware - Combined Version](#esp32-firmware---combined-version)
+  - [Database Schema](#database-schema)
+  - [Flutter App Structure](#flutter-app-structure)
+- [Usage](#usage)
+- [API Documentation](#api-documentation)
+- [Project Structure](#project-structure)
+- [Challenges & Solutions](#challenges--solutions)
+- [Future Enhancements](#future-enhancements)
+- [Contributing](#contributing)
+- [License](#license)
+- [Acknowledgments](#acknowledgments)
+- [Contact](#contact)
 
 ---
 
-## 🧠 Introduction
+## 🎯 Overview
 
-The **Real-Time Bus Tracking System** is designed to provide live location updates of public buses using **GPS and GSM** modules integrated with an **ESP32 microcontroller**.  
-The system transmits bus coordinates to a **Supabase cloud database** and displays the data on a **Flutter-based mobile app** using **OpenStreetMap** for visualization.  
+The **Real-Time Bus Tracking System** is designed to modernize public transportation by providing live tracking updates of buses directly to passengers' mobile phones. This project specifically targets the Himachal Road Transport Corporation (H.R.T.C.) buses but can be adapted for any public transport system.
 
-This project aims to enhance the **efficiency, safety, and reliability** of public transportation by allowing commuters to monitor bus positions, arrival times, and routes in real-time.
+### Key Objectives
+
+- ✅ Provide real-time bus location tracking
+- ✅ Reduce passenger waiting time uncertainty
+- ✅ Improve public transportation efficiency
+- ✅ Offer cost-effective hardware solutions
+- ✅ Enable scalable cloud-based data management
+- ✅ Create user-friendly mobile applications
+
+**Project Period:** August 2024 - December 2024  
+**Institution:** Jawaharlal Nehru Govt. Engg. College, Sundernagar (HP)
 
 ---
 
-## 🎯 Objectives
+## ✨ Features
 
-- Track bus locations in real-time using GPS and GSM.
-- Display live data on a user-friendly Flutter mobile app.
-- Enable cloud-based data logging using Supabase and ThingSpeak.
-- Improve commuter convenience and reduce uncertainty.
-- Support smart city and intelligent transport initiatives.
+### For Passengers
+- 📍 **Real-time location tracking** on interactive maps
+- ⏱️ **Estimated arrival times** at bus stops
+- 🗺️ **Route visualization** with OpenStreetMap
+- 📱 **Cross-platform mobile app** (Android/iOS)
+- 🔔 **Push notifications** for bus updates
+- 👤 **User authentication** and profile management
+
+### For Administrators
+- 📊 **Fleet management dashboard**
+- 📈 **Historical data analytics**
+- 🚨 **Real-time alerts** for delays/breakdowns
+- 🛣️ **Route optimization insights**
+- 👥 **Driver management system**
+- 📉 **Performance monitoring**
+
+### Technical Features
+- 🌐 **GPRS-based data transmission**
+- 🛰️ **GPS coordinate tracking**
+- ☁️ **Cloud database storage** (Supabase)
+- 🔄 **Real-time data synchronization**
+- 🔋 **Power-efficient hardware design**
+- 🔐 **Secure API communications**
 
 ---
 
-## ⚙️ Block Diagram & Working
-
-```mermaid
-graph LR
-A[GPS Module (Neo-6M)] -->|Latitude, Longitude| B[ESP32 (LilyGO T-Call SIM800H)]
-B -->|GPRS Data| C[Supabase Cloud Database]
-C -->|REST API| D[Flutter Mobile Application]
-D -->|Visualization| E[OpenStreetMap API]
+## 🏗️ System Architecture┌─────────────────┐
+│   GPS Module    │ ──► Captures Location
+│   (Neo-6M)      │
+└────────┬────────┘
+│
+▼
+┌─────────────────┐
+│  ESP32 + GSM    │ ──► Processes & Transmits
+│ (LilyGO T-Call) │
+└────────┬────────┘
+│ GPRS
+▼
+┌─────────────────┐
+│  Cloud Database │ ──► Stores Data
+│   (Supabase)    │
+└────────┬────────┘
+│ REST API
+▼
+┌─────────────────┐
+│  Mobile App     │ ──► Displays to Users
+│   (Flutter)     │
+└─────────────────┘
