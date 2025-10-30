@@ -21,15 +21,7 @@ A comprehensive IoT-based real-time bus tracking solution that combines GPS, GSM
 -
   - [Database Schema](#database-schema)
   - [Flutter App Structure](#flutter-app-structure)
-- [Usage](#usage)
-- [API Documentation](#api-documentation)
-- [Project Structure](#project-structure)
-- [Challenges & Solutions](#challenges--solutions)
-- [Future Enhancements](#future-enhancements)
-- [Contributing](#contributing)
-- [License](#license)
-- [Acknowledgments](#acknowledgments)
-- [Contact](#contact)
+  
 
 ---
 
@@ -149,8 +141,7 @@ dependencies:
 - Neo-6M GPS Module × 1
 - SIM card with GPRS data plan
 - 5V Rechargeable Battery
-- Jumper wires
-- Weather-resistant enclosure (optional)
+
 
 #### Wiring Diagram
 ```
@@ -191,16 +182,6 @@ GND           ───────► GND
 - Supabase account
 - ThingSpeak account (for visualization)
 
-#### 1. Clone Repository
-```bash
-git clone https://github.com/yourusername/real-time-bus-tracking.git
-cd real-time-bus-tracking
-```
-
-#### 2. ESP32 Firmware Setup
-```bash
-cd firmware
-```
 
 **Install Required Arduino Libraries:**
 - TinyGSM
@@ -208,52 +189,10 @@ cd firmware
 - HardwareSerial
 - Wire
 
-**Via Arduino IDE:**
-1. Open `Sketch > Include Library > Manage Libraries`
-2. Search and install: `TinyGSM`, `TinyGPS-Plus`
-
-#### 3. Mobile App Setup
-```bash
-cd mobile_app
-flutter pub get
-```
-
-#### 4. Database Setup
+#### Database Setup
 
 **Supabase Schema:**
-```sql
--- Create tables (see complete schema below)
-CREATE TABLE drivers (
-  id BIGINT PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
-  name TEXT NOT NULL,
-  contact_number TEXT,
-  license_number TEXT UNIQUE
-);
-
-CREATE TABLE buses (
-  id BIGINT PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
-  bus_number TEXT NOT NULL UNIQUE,
-  route TEXT NOT NULL,
-  capacity INTEGER,
-  driver_id INTEGER REFERENCES drivers(id),
-  status TEXT CHECK (status IN ('active', 'maintenance', 'inactive'))
-);
-
-CREATE TABLE locations (
-  id BIGINT PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
-  bus_id INTEGER REFERENCES buses(id),
-  latitude DECIMAL(10, 8) NOT NULL,
-  longitude DECIMAL(11, 8) NOT NULL,
-  timestamp TIMESTAMPTZ DEFAULT NOW(),
-  previous_stop TEXT,
-  next_stop TEXT
-);
-```
-
-Run this schema in your Supabase SQL editor.
-
----
-
+[Real-time-bus-tracking-system](Supabase_schema)
 ## ⚙️ Configuration
 
 ### ESP32 Configuration
