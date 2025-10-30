@@ -194,6 +194,10 @@ GND           ───────► GND
 
 ## Database Setup
 
+**Real-time data on ThingSpeak** 
+
+![Real-time-bus-tracking-system](thingspeak_data.png)
+
 **Supabase Schema:**
 ![Real-time-bus-tracking-system](Supabase_schema.png)
 
