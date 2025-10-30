@@ -19,7 +19,7 @@ A comprehensive IoT-based real-time bus tracking solution that combines GPS, GSM
   - [Hardware Setup](#hardware-setup)
   - [Software Setup](#software-setup)
   - [Database Schema](#database-schema)
-  - [Flutter App Structure](#flutter-app-structure)
+ 
   
 
 ---
@@ -198,21 +198,3 @@ GND           ───────► GND
 ![Real-time-bus-tracking-system](Supabase_schema.png)
 ## ⚙️ Configuration
 
-### ESP32 Configuration
-
-Edit the configuration in the Arduino sketch:
-```cpp
-// Network Configuration
-const char apn[] = "your-apn";           // Your GPRS APN (e.g., "bsnlnet")
-const char gprsUser[] = "";              // GPRS username (if required)
-const char gprsPass[] = "";              // GPRS password (if required)
-
-// Supabase Configuration
-const char server[] = "your-project.supabase.co";
-const char resource[] = "/rest/v1/coordinates";
-String apiKeyValue = "your-supabase-anon-key";
-
-// ThingSpeak Configuration (optional)
-const char thingSpeakServer[] = "api.thingspeak.com";
-String thingSpeakAPIKey = "your-thingspeak-api-key";
-```
