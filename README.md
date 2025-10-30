@@ -18,7 +18,7 @@ A comprehensive IoT-based real-time bus tracking solution that combines GPS, GSM
 - [Installation](#installation)
   - [Hardware Setup](#hardware-setup)
   - [Software Setup](#software-setup)
-  - [Database Schema](#database-schema)
+  - [Database](#database)
  
   
 
@@ -192,7 +192,7 @@ GND           ───────► GND
 - HardwareSerial
 - Wire
 
-## Database Setup
+## Database 
 
 **Real-time data on ThingSpeak** 
 
