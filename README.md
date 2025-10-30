@@ -12,7 +12,7 @@ A comprehensive IoT-based real-time bus tracking solution that combines GPS, GSM
 
 - [Overview](#overview)
 - [Features](#features)
-- [System Architecture](#system-architecture)
+- [Workflow](#Workflow)
 - [Hardware Components](#hardware-components)
 - [Software Stack](#software-stack)
 - [Installation](#installation)
@@ -81,25 +81,7 @@ The **Real-Time Bus Tracking System** is designed to modernize public transporta
 
 ---
 
-## 🏗️ System Architecture┌─────────────────┐
-│   GPS Module    │ ──► Captures Location
-│   (Neo-6M)      │
-└────────┬────────┘
-│
-▼
-┌─────────────────┐
-│  ESP32 + GSM    │ ──► Processes & Transmits
-│ (LilyGO T-Call) │
-└────────┬────────┘
-│ GPRS
-▼
-┌─────────────────┐
-│  Cloud Database │ ──► Stores Data
-│   (Supabase)    │
-└────────┬────────┘
-│ REST API
-▼
-┌─────────────────┐
-│  Mobile App     │ ──► Displays to Users
+## 🏗️ Workflow 
+   ![Real-time-bus-tracking-system](Workflow.png)
 │   (Flutter)     │
 └─────────────────┘
