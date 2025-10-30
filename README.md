@@ -146,20 +146,20 @@ dependencies:
 ```
 ESP32 T-Call          Neo-6M GPS
 ─────────────         ──────────
-GPIO 18 (TX2) ───────► RX
-GPIO 19 (RX2) ◄─────── TX
+GPIO 18       ───────► TX
+GPIO 19       ◄─────── RX
 3.3V          ───────► VCC
 GND           ───────► GND
 ```
 
 #### Circuit Connections
 
-| ESP32 Pin | Neo-6M Pin | Description |
-|-----------|------------|-------------|
-| GPIO 18   | RX         | Serial TX to GPS |
-| GPIO 19   | TX         | Serial RX from GPS |
-| 3.3V      | VCC        | Power supply |
-| GND       | GND        | Ground |
+| ESP32 Pin | Neo-6M Pin | 
+|-----------|------------|
+| GPIO 18   | TX         | 
+| GPIO 19   | RX         | 
+| 3.3V      | VCC        | 
+| GND       | GND        | 
 
 **Note**: The SIM800H module is integrated into the LilyGO T-Call board.
 
