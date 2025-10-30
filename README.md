@@ -198,5 +198,5 @@ GND           ───────► GND
 ![Real-time-bus-tracking-system](Supabase_schema.png)
 
 ##App User interface:
-![Real-time-bus-tracking-system](circuit_diagram.png)
+![Real-time-bus-tracking-system](APP_UI.png)
 
