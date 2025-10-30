@@ -172,7 +172,7 @@ GND           ───────► GND
 5. **Enclosure**: Place components in weather-resistant housing (if outdoor use)
 6. **Antenna Positioning**: Ensure GPS antenna has unobstructed view of the sky
 
-![Real-time-bus-tracking-system](circuit diagram.png)
+![Real-time-bus-tracking-system](circuit_diagram.png)
 **Circuit diagram**
 ![Real-time-bus-tracking-system](final_circuit.jpg)
 **Physical device**
