@@ -192,9 +192,11 @@ GND           ───────► GND
 - HardwareSerial
 - Wire
 
-#### Database Setup
+## Database Setup
 
 **Supabase Schema:**
 ![Real-time-bus-tracking-system](Supabase_schema.png)
-## ⚙️ Configuration
+
+##App User interface:
+![Real-time-bus-tracking-system](circuit_diagram.png)
 
