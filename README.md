@@ -18,7 +18,6 @@ A comprehensive IoT-based real-time bus tracking solution that combines GPS, GSM
 - [Installation](#installation)
   - [Hardware Setup](#hardware-setup)
   - [Software Setup](#software-setup)
--
   - [Database Schema](#database-schema)
   - [Flutter App Structure](#flutter-app-structure)
   
@@ -175,7 +174,7 @@ GND           ───────► GND
 
 ![Real-time-bus-tracking-system](circuit_diagram.png)
 **Circuit diagram**
-![Real-time-bus-tracking-system](final_circuit.png)
+![Real-time-bus-tracking-system](final_circuit.jpg)
 **Physical device**
 ### Software Setup
 
