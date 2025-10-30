@@ -192,7 +192,7 @@ GND           ───────► GND
 #### Database Setup
 
 **Supabase Schema:**
-[Real-time-bus-tracking-system](Supabase_schema)
+[Real-time-bus-tracking-system](Supabase_schema.png)
 ## ⚙️ Configuration
 
 ### ESP32 Configuration
