@@ -173,6 +173,7 @@ GND           ───────► GND
 6. **Antenna Positioning**: Ensure GPS antenna has unobstructed view of the sky
 
 ![Real-time-bus-tracking-system](circuit_diagram.png)
+
 **Circuit diagram**
 ![Real-time-bus-tracking-system](final_circuit.jpg)
 **Physical device**
