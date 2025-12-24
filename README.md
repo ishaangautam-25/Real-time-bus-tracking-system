@@ -37,8 +37,7 @@ The **Real-Time Bus Tracking System** is designed to modernize public transporta
 - ✅ Enable scalable cloud-based data management
 - ✅ Create user-friendly mobile applications
 
-**Project Period:** August 2024 - December 2024  
-**Institution:** Jawaharlal Nehru Govt. Engg. College, Sundernagar (HP)
+
 
 ---
 
