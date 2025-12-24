@@ -71,7 +71,77 @@ The **Real-Time Bus Tracking System** is designed to modernize public transporta
 ---
 
 ## 🏗️ Workflow 
-   ![Real-time-bus-tracking-system](Workflow.png)
+   
+```mermaid
+flowchart TD
+    Start([Start])
+    Connect[Connect TTGO T-Call ESP32 with Neo-6M GPS Module]
+    Program[Program TTGO T-Call ESP32 to Capture GPS Coordinates]
+    Captured{Are coordinates captured?}
+    CheckGPS[Check GPS Connections]
+    ReadGPS[Read latitude and longitude from the GPS module]
+    PrepareData[Prepare GPS data in JSON format for transmission]
+    SendData[Send formatted GPS data via GPRS to the server]
+    DataReceived{Was data received?}
+    SaveDB[Save GPS coordinates in the database for retrieval]
+    FetchApp[The mobile app fetches the latest location data]
+    AppReceived{Is the data received by the mobile app?}
+    DisplayMap[Display location using the Open Street Map API]
+    Complete([The system completes the cycle])
+    Troubleshoot[Troubleshoot API and network issues]
+
+    Start --> Connect
+    Connect --> Program
+    Program --> Captured
+    Captured -->|Yes| ReadGPS
+    Captured -->|No| CheckGPS
+    CheckGPS --> Captured
+    ReadGPS --> PrepareData
+    PrepareData --> SendData
+    SendData --> DataReceived
+    DataReceived -->|Yes| SaveDB
+    DataReceived -->|No| SendData
+    SaveDB --> FetchApp
+    FetchApp --> AppReceived
+    AppReceived -->|Yes| DisplayMap
+    AppReceived -->|No| Troubleshoot
+    DisplayMap --> Complete
+    Troubleshoot --> AppReceived
+
+    style Start fill:#ffd699,color:#000000
+    style Complete fill:#ffd699,color:#000000
+    style Captured fill:#b3d9ff,color:#000000
+    style DataReceived fill:#b3d9ff,color:#000000
+    style AppReceived fill:#b3d9ff,color:#000000
+    style Connect color:#ffffff
+    style Program color:#ffffff
+    style CheckGPS color:#ffffff
+    style ReadGPS color:#ffffff
+    style PrepareData color:#ffffff
+    style SendData color:#ffffff
+    style SaveDB color:#ffffff
+    style FetchApp color:#ffffff
+    style DisplayMap color:#ffffff
+    style Troubleshoot color:#ffffff
+```
+
+## System Description
+
+This flowchart illustrates the complete GPS tracking system workflow from data capture to display:
+
+### Components
+- **Hardware**: TTGO T-Call ESP32 with Neo-6M GPS Module
+- **Communication**: GPRS for data transmission
+- **Storage**: Database for GPS coordinates
+- **Display**: Mobile app with Open Street Map API
+
+### Process Flow
+1. System initialization and GPS module connection
+2. GPS coordinate capture with error handling
+3. Data formatting and transmission via GPRS
+4. Database storage for persistence
+5. Mobile app data retrieval and display
+6. Error handling and troubleshooting
 ### Data Flow
 1. **GPS Module** continuously captures latitude/longitude coordinates
 2. **ESP32 Microcontroller** processes GPS data and formats it as JSON
